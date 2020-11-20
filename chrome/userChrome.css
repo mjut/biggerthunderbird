@@ -2,7 +2,29 @@
 
 * {
 	font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif !important;
+	//font-size: 10pt !important;
 }
+
+/* remove menu and toolbar text shadows */
+#mail-toolbox,
+.mail-toolbox,
+#mail-toolbar-menubar2,
+#tabs-toolbar,
+#status-bar,
+#compose-toolbox,
+#ab-toolbox,
+#CardViewBox,
+#CardTitle,
+#tabs-toolbar .tab-text,
+#tabs-toolbar .tabmail-tab[selected=true],
+#tabs-toolbar .tabmail-tab:not([selected=true]),
+#tabs-toolbar::after,
+#tabs-toolbar::before {
+	-moz-box-shadow: none !important;
+	box-shadow: none !important;
+	text-shadow: none !important;
+}
+
 
 
 /* Sidebar */
@@ -65,6 +87,21 @@
 
 
 /* Mail Header */
+
 #msgHeaderView {
 	font-size: 11pt !important;
 }
+#msgHeaderView * {
+font-weight: 400 !important;
+}
+#msgHeaderView #expandedtagsBox * {
+	border: none !important;
+}
+
+
+/* Looks better without: */
+#status-bar {
+	visibility: collapse !important;
+}
+
+
